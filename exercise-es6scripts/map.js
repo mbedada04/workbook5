@@ -5,11 +5,12 @@ let kids = [
 ];
 
 
-// let kidsNames =[];
- for (let index = 0; index < kids.length; index++) {
-    const element = kids[index];
-    kidsNames.push(`${kid.first} ${kid.last}`)
-    
- }
- console.log(kidsNames);
- 
+function buildFullName(arrayElement) {
+ return arrayElement.first + " " + arrayElement.last;
+}
+let namesList = kids.map(buildFullName);
+let numElements = namesList.length;
+for (let i = 0; i < numElements; i++) {
+ console.log(namesList[i]);
+ // output matches image above
+}
